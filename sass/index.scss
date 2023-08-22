@@ -1,4 +1,5 @@
-@use "./components/header" as *;
+@use "./components/header";
+@use "./components/chart";
 
 :root {
   --color-red: hsl(10, 79%, 65%);
@@ -12,7 +13,7 @@
   --fs-1: 0.9375rem;
   --fs-2: 1.125rem;
   --fs-3: 2rem;
-  --fs-4: 4rem;
+  --fs-4: 3rem;
 
   --fw-1: 400;
   --fw-2: 700;
@@ -23,7 +24,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -36,6 +37,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background-color: var(--color-cream);
 }
 
 .main {

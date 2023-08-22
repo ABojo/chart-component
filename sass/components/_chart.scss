@@ -1,0 +1,105 @@
+.chart {
+  background-color: var(--color-white);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+
+  &__heading {
+    font-size: var(--fs-3);
+    margin-bottom: 3rem;
+    color: var(--color-brown-2);
+  }
+
+  &__day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+  }
+
+  &__popup {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-white);
+    background-color: var(--color-brown-2);
+    font-weight: var(--fw-2);
+    font-size: var(--fs-1);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    transition: all 0.2s;
+  }
+
+  &__bar:hover ~ &__popup,
+  &__bar:focus ~ &__popup {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__text {
+    font-size: var(--fs-1);
+    color: var(--color-brown-1);
+  }
+
+  &__bar {
+    width: 100%;
+    height: 8rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-red);
+    transition: all 0.2s;
+    cursor: pointer;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &--today {
+      background-color: var(--color-cyan);
+    }
+  }
+
+  &__bars {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+  }
+
+  &__divider {
+    background-color: var(--color-brown-1);
+    width: 100%;
+    height: 1px;
+    opacity: 0.25;
+    margin-block: 2rem;
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__total-amount {
+    font-weight: var(--fw-2);
+    font-size: var(--fs-4);
+    color: var(--color-brown-2);
+  }
+
+  &__growth-amount {
+    text-align: right;
+    font-weight: var(--fw-2);
+    font-size: var(--fs-2);
+    color: var(--color-brown-2);
+  }
+
+  &__stats span {
+    color: var(--color-brown-1);
+    font-size: var(--fs-2);
+  }
+}
