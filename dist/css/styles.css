@@ -1,0 +1,27 @@
+:root {
+  --color-red: hsl(10, 79%, 65%);
+  --color-cyan: hsl(186, 34%, 60%);
+  --color-brown-1: hsl(28, 10%, 53%);
+  --color-brown-2: hsl(25, 47%, 15%);
+  --color-cream: hsl(27, 66%, 92%);
+  --color-pale-orange: hsl(33, 100%, 98%);
+  --fs-1: 0.9375rem;
+  --fs-2: 1.125rem;
+  --fs-3: 2rem;
+  --fs-4: 4rem;
+  --fw-1: 400;
+  --fw-2: 700;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+html {
+  font-family: "DM Sans", sans-serif;
+  font-weight: var(--fw-1);
+}
