@@ -1,9 +1,15 @@
+@use "../abstracts/breakpoints" as *;
+
 .chart {
   background-color: var(--color-white);
   border-radius: 1.5rem;
-  padding: 2.5rem;
+  padding: 2rem;
   padding-top: 1.5rem;
   margin-top: 2rem;
+
+  @media (max-width: $bp-1) {
+    padding: 1.5rem;
+  }
 
   &__heading {
     font-size: var(--fs-3);
@@ -33,6 +39,10 @@
     border-radius: 0.25rem;
     padding: 0.5rem;
     transition: all 0.2s;
+
+    @media (max-width: $bp-1) {
+      padding-inline: 0.2rem;
+    }
   }
 
   &__bar:hover ~ &__popup,
@@ -71,6 +81,10 @@
     gap: 1rem;
     align-items: end;
     min-height: 10rem;
+
+    @media (max-width: $bp-1) {
+      gap: 0.75rem;
+    }
   }
 
   &__divider {
@@ -79,6 +93,10 @@
     height: 1px;
     opacity: 0.25;
     margin-block: 2rem;
+
+    @media (max-width: $bp-1) {
+      margin-block: 1rem;
+    }
   }
 
   &__stats {
